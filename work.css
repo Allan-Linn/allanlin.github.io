@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto+Serif:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Roboto Flex", sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #323233;
+    --backgroundColor: #fff;
+    --textColor: #2a1800;
+    --grey: #8E9197;
+}
+
+body{
+    background: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.container_custom{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+/* --makes underline appear after hover--- */
+nav ul li a:hover::after{
+    width :100%;
+}
+
+/* -----work section------ */
+#portfolio{
+    padding: 50px 0;
+}
+
+.sub-title{
+    font-family: 'Roboto Serif', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer em {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.layer{
+    width: 100%;
+    height: 0; /*set to 0 intiially to hide content until hovered over it*/
+    background: linear-gradient(rgba(209, 207, 207, 0.3), white);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px; 
+    text-align: center;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.layer p h3{
+    font-weight: 700;
+}
+
+/* .layer a i{
+    color: var(--black);
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.company-title{
+    font-weight: bold;
+    color:black;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%; /* display content when hovered over*/
+}
+
+.work:hover .layer p{
+    padding-top: 100px;
+}
+
+/* --------------- */
+.work .layer p .company-title{
+    font-weight: 800;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* --------------- */
+
+.button{
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    width: fit-content;
+    border: 1px solid var(--black);
+    padding: 7px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--black);
+    transition: background 0.5s;
+}
+
+.button:hover{
+    background: rgb(161, 161, 161);
+}
+
+
+/* -----contact section----- */
+
+.row_custom{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+
+}
+.contact-left p i{
+    color: var(--grey);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a i:hover{
+    color: var(--black)
+}
+
+/* -----responsive design---------*/
+nav .fa-regular, nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    nav .fa-regular, nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: -200px; /*hide menu by default until we click on icon*/
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-regular{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .work:hover .layer p{
+        padding-top: 30px;
+    }
+}

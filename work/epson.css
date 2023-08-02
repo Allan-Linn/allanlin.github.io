@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto+Serif:opsz@8..144&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Roboto Flex", sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #323233;
+    --backgroundColor: #fff;
+    --textColor: #2a1800;
+    --grey: #8E9197;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20%;
+    padding-right:20%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--black);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+/* --makes underline appear after hover--- */
+nav ul li a:hover::after{
+    width :100%;
+}
+
+
+/* ----------basic-info section------------- */
+.context{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 60px;
+}
+
+.context-items{
+    padding-right: 1.5rem;
+}
+
+#basic-info .context .context-items h4{
+    font-family: 'Roboto Serif', serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0.5rem 0;
+    color: var(--grey);
+}
+
+#basic-info .context .context-items p{
+    font-weight: 400;
+    line-height: 1.75rem;
+    font-size: 18px;
+    margin: 0;
+    color: var(--textColor);
+}
+
+
+/* -----background section------- */
+#about{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.center{
+    margin-top: 60px;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-col img{
+    width: 100%;
+    display: block;
+    border-radius: 24px;
+}
+
+.about-col-1{
+    margin-left: 00px;
+    flex-basis: 35%;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.about-col-1 h2{
+    display: block;
+    font-size: 30px;
+    color: var(--textColor);
+    margin-block-start: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.about-col-2 p{
+    display: block;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--textColor);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.about-col-2 ul li{
+    display: block;
+    color: var(--grey);
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+
+.about-col-2 ul a{
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 10px;
+}
+
+.about-col-2 ul a li:hover{
+    color: var(--textColor);
+    /* text-decoration: underline; */
+    scale: 1.01;
+}
+
+
+.about-col-2 ul li:before{
+    content: "• ";
+}
+
+/* .about-col-2 h2{
+    display: block;
+    font-size: 20px;
+    margin-block-start: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+} */
+
+.sub-title{
+    font-family: 'Roboto Serif', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+/* ------contributions------ */
+/* #contributions1{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+} */
+
+/* .about-col-2 h2{
+    margin-block-start: 0em;
+} */
+
+#contributions2{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#contributions3{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#contributions4{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#contributions1 .about-col-2{
+    margin-top: 20px;
+}
+
+/* #contributions1 .about-col-2 p:before{
+    content: "• ";
+}
+
+#contributions2 .about-col-2 p:before{
+    content: "• ";
+}
+#contributions3 .about-col-2 p:before{
+    content: "• ";
+}
+
+#contributions4 .about-col-2 p:before{
+    content: "• ";
+} */
+
+/* -----responsive design---------*/
+nav .fa-regular, nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    nav .fa-regular, nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #fff;
+        position: fixed;
+        top: 0;
+        right: -200px; /*hide menu by default until we click on icon*/
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-regular{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px; /* reduce font size of description*/
+    }
+
+    .context{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0px;
+        margin-top: 60px;
+    }
+
+}

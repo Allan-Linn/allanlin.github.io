@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About | Allan Lin</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" href="images/logoal.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/45072af8e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- ----header and nav---- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="about.html">
+                    <img src="images/logoal.png" alt="logo" width = "50" height = "50">
+                </a>
+                <ul id = "sidemenu">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick = "closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ----section for images & description---- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <img src="images/profile3_c.jpg" alt="Profile">
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h1 class = "sub-title">About Me</h1>
+                    <p>Hi, my name is Allan. I am a fourth year Engineering Science student at the University of Toronto, specializing in Machine Intelligence.
+                    <br>
+                    <br>
+                    I am passionate about innovation and contributing to the development of cutting-edge technologies. 
+                    I apply a first-principles approach when working on engineering projects. I enjoy breaking complex problems down into smaller components and
+                    building solutions from the ground up. I am interested in exploring the intersection between machine learning and software development. 
+                    This is because the cooperation between humans and machines are ever more likely with the rapid development of artificial intelligence.
+                    <br>
+                    <br>
+                    <!-- As J. Robert Oppenheimer once said: “Theory will take you only so far”.  -->
+                    In my free time, I like to play badminton and basketball. I am a big fan of spending time in nature. I also like exploring new coffee shops and trying out different flavours of latte.
+
+
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----section for contact----- -->
+    <div id = "contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/allan-linn/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Allan-Linn"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <p><i class="fa-regular fa-envelope"></i>allan.lin2903@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

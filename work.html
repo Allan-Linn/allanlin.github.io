@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Allan Lin</title>
+    <link rel="icon" href="images/logoal.png" type="image/x-icon">
+    <link rel="stylesheet" href="work.css">
+    <script src="https://kit.fontawesome.com/45072af8e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ----header and nav---- -->
+    <div id="header">
+        <div class="container_custom">
+            <nav>
+                <a href="about.html">
+                    <img src="images/logoal.png" alt="logo" width = "50" height = "50">
+                </a>
+                <ul id = "sidemenu">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick = "closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ----work experience section---- -->
+    <div id = "portfolio">
+        <div class="container_custom">
+            <h1 class = "sub-title">Work Experience</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/epson.jpeg" alt="Epson">
+                    <div class="layer">
+                        <p> <b class = "company-title">Epson, 2023</b> - Software Developer on the Computer Vision and Robotics Team</p>
+                        <a href="work/epson.html" class = "button">See More</a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/CMU.jpeg" alt="CMU">
+                    <div class="layer">
+                        <p><b class = "company-title">Carnegie Mellon University, 2022 </b>- Reinforcement Learning Researcher with Focus on Deep Q-Network</p>
+                        <a href="work/CMU.html" class = "button">See More</i></a>
+                    </div>  
+                </div>
+                <div class="work">
+                    <img src="./images/huawei.jpeg" alt="Huawei">
+                    <div class="layer">
+                        <p> <b class = "company-title">Huawei, 2021</b> - Designing and Developing Software for Internal Data Processing </p>
+                        <a href="work/huawei.html" class = "button">See More</a>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----contact---- -->
+    <div id = "contact">
+        <div class="container_custom">
+            <div class="row_custom">
+                <div class="contact-left">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/allan-linn/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Allan-Linn"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <p><i class="fa-regular fa-envelope"></i>allan.lin2903@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

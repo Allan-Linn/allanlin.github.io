@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Epson | Allan Lin</title>
+    <link rel="icon" href="../images/logoal.png" type="image/x-icon">
+    <link rel="stylesheet" href="epson.css">
+    <script src="https://kit.fontawesome.com/45072af8e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ----header and nav---- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="../about.html">
+                    <img src="../images/logoal.png" alt="logo" width = "50" height = "50">
+                </a>
+                <ul id = "sidemenu">
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick = "closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- --------company image------- -->
+    <div id="bg">
+        <div class="container">
+            <div class="center">
+                <div class="img-col">
+                    <img src="../images/epson_cover.jpeg" alt="Epson logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="Epson-img">
+                    <img src= "../images/epson.jpeg" alt="Epson Image" width = "290" height = "181">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- -----------basic info---------- -->
+    <div id = "basic-info">
+        <div class="container">
+            <div class="context">
+                <div class="context-items">
+                    <h4>ROLE</h4>
+                    <p>Software Developer Intern</p>
+                </div>
+                <div class="context-items">
+                    <h4>TEAM</h4>
+                    <p>EDGE Vision</p>
+                </div>
+                <div class="context-items">
+                    <h4>TIME</h4>
+                    <p>Sept. 2022 - Aug. 2023</p>
+                </div>
+                <div class="context-items">
+                    <h4>LOCATION</h4>
+                    <p>Hybrid</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------exp------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2>Background</h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <p> I joined Epson EDGE (Epson's robotics and algorithm development team) as a software developer intern in September of 2022. 
+                        I had a flexible role and was able to work on multiple projects, including:
+                    </p>
+                    <ul>
+                        <a href = "#contributions1"><li>Neural Radiance Fields (NerF) for Rendering 3D Scenes</li></a>
+                        <a href = "#contributions2"><li> 3D Object Detection and Pose Estimation (ODPE)</li></a>
+                        <a href = "#contributions3"><li> Differentiable Rendering for Rendering Photorealistic Images</li></a>
+                        <a href = "#contributions4"><li> Depth Prediction from Images</li></a>
+                    </ul>
+
+                    <p>
+                        Many of these projects have end goals of serving Epson's <a href = "https://epson.com/industrial-robots-factory-automation">
+                        industrial robots.</a>
+                        <br>
+                    </p>
+                    <p>
+                        While I cannot elaborate on the know-how development and product uses of the projects I worked on, 
+                        I can share some of my responsibilities and the impacts I created.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions1">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2>Contributions</h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>Neural Radiance Fields (NerF)</h2>
+                    <p> 
+                        I implemented a novel NeRF model that trains on a set of sparse input views and renders 3D scenes from unseen views. This 
+                        technology assisted with downstream tasks for Epson's industrial robots. 
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions2">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2></h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>3D Object Detection</h2>
+                    <p> 
+    
+                        I developed an algorithm to detect and label spherical objects on depth maps. This eliminated the requirement
+                        for manual effort when labelling depths data. The algorithm achieved greater accuracy compared to 
+                        manual labelling. I also assisted in detecting objects with arbitrary shapes in an image.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions3">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2></h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>Differentiable Rendering</h2>
+                    <p> 
+                        I assisted in applying differentiable rendering to render photorealistic images. This technology was used in 
+                        downstream tasks by the computer vision and robotics team. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions4">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2></h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>Depth Prediction from Images</h2>
+                    <p> 
+                        I trained machine learning models to predict depth information of a robot's workspace, evaluation results are within three millimeters of error.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

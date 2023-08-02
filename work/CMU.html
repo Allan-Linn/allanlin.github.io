@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMU | Allan Lin</title>
+    <link rel="icon" href="../images/logoal.png" type="image/x-icon">
+    <link rel="stylesheet" href="CMU.css">
+    <script src="https://kit.fontawesome.com/45072af8e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ----header and nav---- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="../about.html">
+                    <img src="../images/logoal.png" alt="logo" width = "50" height = "50">
+                </a>
+                <ul id = "sidemenu">
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick = "closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!-- --------company image------- -->
+    <div id="bg">
+        <div class="container">
+            <div class="center">
+                <div class="img-col">
+                    <img src="../images/CMU_cover.jpeg" alt="Epson logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -----------basic info---------- -->
+    <div id = "basic-info">
+        <div class="container">
+            <div class="context">
+                <div class="context-items">
+                    <h4>ROLE</h4>
+                    <p>Reinforcement Learning Researcher</p>
+                </div>
+                <div class="context-items">
+                    <h4>ADVICED BY</h4>
+                    <a href="https://www.heinz.cmu.edu/faculty-research/profiles/zhang-peter"><p>Professor. Peter Zhang</p></a>
+                </div>
+                <div class="context-items">
+                    <h4>TIME</h4>
+                    <p>May 2022 - Sept. 2022</p>
+                </div>
+                <div class="context-items">
+                    <h4>LOCATION</h4>
+                    <p>Remote</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------exp------------ -->
+    <div id="background">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2>Background</h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <p>
+                        I joined professor Zhang's Applied-Analytics group at Carnegie Mellon University in the summer of 2022. I focused on 
+                        researching methods to improve the Deep Q-Network (DQN) algorithm in deep reinforcement learning. Specifically, I worked
+                        on:
+
+                    </p>
+                    <ul>
+                        <a href = "#contributions1"><li>Methods to reduce the overestimation of action values in DQN [released]</li></a>
+                        <a href = "#contributions2"><li>Adaptively tuning model hyperparameters during training [released]</li></a>
+                        <a href = "#contributions3"><li>Sampling Techniques during Training</li></a>
+                    </ul>
+                    <p>
+                        I incorporated my research findings to multiple game environments, and showcased the results in a presentation to the
+                        research group. The end goal of the project was to train a DQN policy to efficiently solve Vehicle Routing Problems (VRP).
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions1">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2>Contributions</h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>Reducing DQN Overestimation by Replacing Max Operator</h2>
+                    <p> 
+                        DQN suffers from an overestimation problem due to the use of the max operator to select and evaluate an action. To mitigate this problem, we tested alternative operators with 
+                        similar properties to the max, such as convexity and monotonically non-decreasing. I implemented multiple variations of the 
+                        Kolmogorov-Nagumo average operator in Pytorch, and evaluated their performances compared to traditional DQN.
+                    </p>
+                    
+                    <figure>
+                        <img src="../images/f.gif" alt="Flappy Bird Gif">
+                        <figcaption>Figure 1: Performance of Our Model in Custom Built Flappy Bird Environment</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="../images/atari.gif" alt="Flappy Bird Gif">
+                        <figcaption>Figure 2: Our Model playing Atari</figcaption>
+                    </figure>
+                    <!-- <div class="gif-container">
+                        <figure>
+                            <img src="../images/f.gif" alt="Flappy Bird Gif">
+                            <figcaption>Figure 1: Performance of Our Model on Custom Built Flappy Bird Environment</figcaption>
+                        </figure>
+
+                        <figure>
+                            <img src="../images/atari.gif" alt="Flappy Bird Gif">
+                            <figcaption>Figure 2: Performance of Our Model on Atari Environment</figcaption>
+                        </figure>
+                    </div> -->
+
+                    <p>
+                        The empirical results across multiple test environments show that our operators outperform DQN with the max operator, leading to 
+                        higher rewards.
+                    </p>
+                    <div class="git">
+                        <a href= "https://github.com/Allan-Linn/DeepRL-FlappyBird"><i class="fa-brands fa-github"></i>See Family of Operators Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions2">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2></h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>Adaptively Tuning Model Hyperparameters During Training</h2>
+                    <p> 
+                        The gradient information from the Q-learning objective function is used to 
+                        update both model parameters and hyperparameters at every iteration. This method was proposed to
+                        eliminate the expensive grid-search required for tuning hyperparameters, thus, reducing 
+                        overall training time.
+                    </p>
+                    <div class="git">
+                        <a href= "https://github.com/Allan-Linn/DeepRL-FlappyBird"><i class="fa-brands fa-github"></i>See Adaptive Mellowmax Code</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contributions3">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2></h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <h2>Sampling Techniques</h2>
+                    <p> 
+                        Different sampling methods for batch selection during training impact model performance. In addition to
+                        standard random sampling, I implemented and evaluated the effectiveness of stratified random sampling, recency sampling 
+                        and reward based sampling for DQN.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

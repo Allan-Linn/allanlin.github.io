@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Huawei | Allan Lin</title>
+    <link rel="icon" href="../images/logoal.png" type="image/x-icon">
+    <link rel="stylesheet" href="huawei.css">
+    <script src="https://kit.fontawesome.com/45072af8e9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- ----header and nav---- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="../about.html">
+                    <img src="../images/logoal.png" alt="logo" width = "50" height = "50">
+                </a>
+                <ul id = "sidemenu">
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick = "closemenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!-- --------company image------- -->
+    <div id="bg">
+        <div class="container">
+            <div class="center">
+                <div class="img-col">
+                    <img src="../images/huawei_cover.jpeg" alt="Huawei logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------basic info---------- -->
+    <div id = "basic-info">
+        <div class="container">
+            <div class="context">
+                <div class="context-items">
+                    <h4>ROLE</h4>
+                    <p>Data Analyst Intern</p>
+                </div>
+                <div class="context-items">
+                    <h4>TEAM</h4>
+                    <p>Data</p>
+                </div>
+                <div class="context-items">
+                    <h4>TIME</h4>
+                    <p>May. 2021 - Aug. 2021</p>
+                </div>
+                <div class="context-items">
+                    <h4>LOCATION</h4>
+                    <p>Remote</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------exp------------ -->
+    <div id="background">
+        <div class="container">
+            <div class="row">
+                <!-- ---profile image on right--- -->
+                <div class="about-col-1">
+                    <h2>Background</h2>
+                </div>
+                <!-- ----col-2 is for text ------- -->
+                <div class="about-col-2">
+                    <p>
+                        I joined Huawei as a data analyst intern in the summer of 2021, amidst the COVID-19 pandemic. 
+                        Therefore, I complemeted the entire work term remotely. I worked with data analysts and software
+                        engineers to develop an efficient pipeline for processing numerical and textual data.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="contributions1">
+            <div class="container">
+                <div class="row">
+                    <!-- ---profile image on right--- -->
+                    <div class="about-col-1">
+                        <h2>Contributions</h2>
+                    </div>
+                    <!-- ----col-2 is for text ------- -->
+                    <div class="about-col-2">
+                        <h2>Building Web Application with Flask for Data Processing</h2>
+                        <p> 
+                            The Flask app provided an internal interface for data analysts to call data processing scripts. 
+                            Prior to building the app, each data analyst needed to pull scripts from the repository and read through manuals before
+                            executing each. The app eliminated user effort by simply asking the user to upload input files and choose the scripts to run. 
+                            It also enabled users with no technical backgrounds to receive processed data.
+                            <br>
+                            <br>
+                            I assisted in building the display of the interface with HTML/CSS, and connected user input files to the target scripts to run. 
+                            I also developed one of the data-processing scripts used in the backend of the app. The interface reduced overall processing time by 80%.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contributions2">
+            <div class="container">
+                <div class="row">
+                    <!-- ---profile image on right--- -->
+                    <div class="about-col-1">
+                        <h2></h2>
+                    </div>
+                    <!-- ----col-2 is for text ------- -->
+                    <div class="about-col-2">
+                        <h2>Methods for Determining Semantic Textual Similarity</h2>
+                        <p> 
+                            One of my tasks was to process the semantics behind text data. Examples include highlighting synonyms of a target word 
+                            in another piece of text and finding keywords to summarize a paragraph.
+                            <br>
+                            <br>
+                            I adopted concepts from machine learning and translated text data to numerical data through embeddings. I implemented 
+                            methods to evaluate the different distances between words, reflecting their similarity score.
+                        </p>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+</body>
+</html>
